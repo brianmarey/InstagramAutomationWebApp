@@ -1,0 +1,22 @@
+a, .breadcrumb-wrap h1, h3, h1, footer h3, .portfolio-wrap:hover .port-icon span, .post-text span, footer a, a:visited, .portfolio-wrap a, .font-large, blockquote small, .testimonial-slider h4, .tags a:hover, .shadow-wrapper h2{ color: #0000cc;}
+.social_icons ul li a, .navbar .nav > li > a:focus, .navbar .nav > li > a:hover, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .dropcap2, #back-top a:hover, .nav-collapse .dropdown-menu > li > a:hover, .nav-collapse .dropdown-menu > li > a:focus, .nav-collapse .dropdown-submenu:hover > a, .dropdown-submenu:focus > a, .my-btn:hover, .my-btn.btn-large:hover, .my-btn.btn-small:hover, .accordion-heading .accordion-toggle.active, .bodered .accordion-heading .accordion-toggle.active, .accordion-heading a.accordion-toggle:hover, .bodered .accordion-heading a.accordion-toggle:hover, .nav > li > a:hover, .nav > li > a:focus, .contact-info li span, #contact_form .send-btn, ul#filters li a:hover, .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active, .social_icons.small ul li a:hover, ul.coyote-features li a:hover, #portfolio-slider-home.owl-theme .owl-controlls .owl-buttons div:hover, .skillbar-bar, h4.form_thanks, .owl-theme .owl-controls.clickable .owl-buttons div:hover, .image-wrap:before, .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span, .big-icon-wrap{background-color:#0000cc;}
+.portfolio-wrap:hover .port-icon:after{border-bottom:1px solid #0000cc;}.tags a:hover{border:1px solid #0000cc;}
+
+blockquote{
+	border-color:#0000cc;
+}
+
+.portfolio-wrap:hover{border-bottom:1px solid #0000cc;}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .nav-collapse .dropdown-menu > li > a:hover, .nav-collapse .dropdown-menu > li > a:focus{
+	border-bottom:3px solid #0000cc;
+	border-left:1px solid #0000cc;
+	background:none;
+	box-shadow:none;
+	color:#0000cc;
+}
+.navbar ul.dropdown-menu li a:hover, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a{
+	border:none;
+	background:#0000cc;
+	color:#FFF !important;
+}

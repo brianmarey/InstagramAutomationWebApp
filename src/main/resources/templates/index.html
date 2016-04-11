@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TwitterAutomation : Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link th:href="@{/css/sitestyle.css}" rel="stylesheet"/>
+    <script th:src="@{/js/jquery.js}"></script>  
+    
+</head>
+<body class="wide">
+<div th:include="fragments/header :: header">...</div>
+        
+
+    <div id="main-wrapper">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+           	
+        <div class="dark-grey">
+            <div class="container">
+            	<div class="row">
+                	<div class="span12 text-center">
+                        <div class="page-header">
+
+
+							<h1>Twitter Automation</h1>
+						</div>
+					<div class="service-box">
+                    <div class="row">
+                    	<div class="span4">
+                            <div class="service-icon-wrap">
+                                <div class="big-icon-wrap pull-left img-circle" style="cursor:pointer" onclick="document.location='./autofollow'">
+                                    <i class="fa fa-twitter fa-2x"></i>
+                                </div>
+                                <div class="service-txt">
+                                	<h3><a href="./autofollow">Autofollow</a></h3>
+                                	<p>Automatically follows users based on keywords.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="service-icon-wrap">
+                                <div class="big-icon-wrap pull-left img-circle" style="cursor:pointer" onclick="document.location='./autounfollow'">
+                                    <i class="fa fa-twitter fa-2x"></i>
+                                </div>
+                                <div class="service-txt">
+                                	<h3><a href="./autounfollow">AutoUnfollow</a></h3>
+                                	<p>Automatically unfollows users who aren't following you back.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">&nbsp;</div>
+                	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+<div th:include="fragments/footer :: footer">...</div>
+</body>
+
+</html>
