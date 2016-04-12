@@ -98,7 +98,7 @@
 			var following = data[ii].following;
 			
 			if (!following) {
-				setTimeout(followTweep,time,id,screenName);
+				setTimeout(followUser,time,id,screenName);
 				//alert("time is " + time);
 				time += timeIncrement;
 			}
@@ -136,12 +136,12 @@
 	}
 	
 	
-	function followTweep(id,screenName) {		
-		var url = theHost + "/TwitterAutomation/followTweep?id=" + id + "&screenName=" + screenName + "&twitterUser=" + twitterUser;
+	function followUser(id,screenName) {		
+		var url = theHost + "/InstagramAutomation/followUser?id=" + id + "&screenName=" + screenName;
 		//alert(url);
 		$.get(url,function( data ) {			
 			var notice = data.message + "" + screenName + "<br/>";
-			//alert(notice);
+			alert(notice);
 			$("#statusResults").append( notice);
 		});
 	}

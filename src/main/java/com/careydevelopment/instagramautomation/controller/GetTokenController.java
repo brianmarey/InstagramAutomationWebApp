@@ -40,7 +40,7 @@ public class GetTokenController {
                     .apiKey(clientId)
                     .apiSecret(clientSecret)
                     .callback(callbackUrl) 
-                    .scope("basic")
+                    .scope("relationships")
                     .build();
 			
 			request.getSession().setAttribute("instagramservice", service);
