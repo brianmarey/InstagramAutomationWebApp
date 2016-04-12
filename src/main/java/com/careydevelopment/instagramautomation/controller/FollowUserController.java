@@ -44,6 +44,7 @@ public class FollowUserController {
 		//Followee followee = new Followee();
 		
 		try {
+			//not supported right now by Instagram
 			RelationshipFeed feed = instagram.setUserRelationship(id, Relationship.FOLLOW);
 
 			LOGGER.info("Meta Code : "       + feed.getMeta().getCode());
