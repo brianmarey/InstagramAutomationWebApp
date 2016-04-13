@@ -15,8 +15,6 @@
 		$("#statusText").show();
 		$("anotherRunButtonDiv").hide();
 		
-		twitterUser = $("#twitteruser").val();
-		
 		var runTime = 0;
 		var runTimeIncrement = 3600000;
 		
@@ -31,7 +29,6 @@
 		
 		setTimeout(completelyFinished, runTime);
 	}
-
 	
 	
 	function beginAutoUnfollow(localhost) {
@@ -85,14 +82,14 @@
 		//var keyword = encodeURIComponent(tags[i].value);
 		//alert("looking at " + tagString);
 			
-		var url = theHost + "/TwitterAutomation/getTweeps?keyword=" + tagString + "&twitterUser=" + twitterUser;
+		var url = theHost + "/InstagramAutomation/getUsers?keyword=" + tagString;
 		
 		//alert (url);
 		
-		$.get(url, processTweeps);
+		$.get(url, processUsers);
 	}
 	
-	function processTweeps(data) {
+	function processUsers(data) {
 		//alert(data.length);
 		for (var ii=0;ii<data.length;ii++) {
 			//alert(data[ii].screenName);
@@ -101,7 +98,7 @@
 			var following = data[ii].following;
 			
 			if (!following) {
-				setTimeout(followTweep,time,id,screenName);
+				setTimeout(followUser,time,id,screenName);
 				//alert("time is " + time);
 				time += timeIncrement;
 			}
@@ -139,12 +136,12 @@
 	}
 	
 	
-	function followTweep(id,screenName) {		
-		var url = theHost + "/TwitterAutomation/followTweep?id=" + id + "&screenName=" + screenName + "&twitterUser=" + twitterUser;
+	function followUser(id,screenName) {		
+		var url = theHost + "/InstagramAutomation/followUser?id=" + id + "&screenName=" + screenName;
 		//alert(url);
 		$.get(url,function( data ) {			
 			var notice = data.message + "" + screenName + "<br/>";
-			//alert(notice);
+			alert(notice);
 			$("#statusResults").append( notice);
 		});
 	}
