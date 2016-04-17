@@ -15,13 +15,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.careydevelopment.propertiessupport.PropertiesFactory;
+import com.careydevelopment.propertiessupport.PropertiesFile;
+
 @Controller
 public class GetTokenController {
 	
 	private static final Logger LOGGER = Logger.getLogger(GetTokenController.class);
 	
-	private static final String INSTAGRAM_PROPERTIES = "/etc/tomcat8/resources/instagram.properties";
-	private static final String LOCALHOST_PROPERTIES = "/etc/tomcat8/resources/localhost.properties";
 	
     @RequestMapping("/getToken")
     public RedirectView getToken(HttpServletRequest request,Model model) {
@@ -29,7 +30,7 @@ public class GetTokenController {
     	String instagramUrl = "";
     	
 		try {
-			Properties props = getProperties();
+			Properties props = PropertiesFactory.getProperties(PropertiesFile.INSTAGRAM_PROPERTIES);
 			
 			String clientId = props.getProperty("client.id");
 			String clientSecret = props.getProperty("client.secret");
@@ -49,7 +50,7 @@ public class GetTokenController {
 			
 			LOGGER.info("Authorization url is " + instagramUrl);
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.error("OAuth problem!",e);
 		}
     	
 		RedirectView redirectView = new RedirectView();
@@ -59,25 +60,14 @@ public class GetTokenController {
     }
 
     
-    private Properties getProperties() throws IOException {
-    	Properties props = new Properties();
-		File file = new File(INSTAGRAM_PROPERTIES);
-		FileInputStream inStream = new FileInputStream(file);
-		props.load(inStream);
-		return props;
-    }
-    
     private String getCallbackUrl() {
     	String callbackUrl = "";
     	
     	try {
 	    	StringBuilder sb = new StringBuilder();
+
+	    	Properties props = PropertiesFactory.getProperties(PropertiesFile.LOCALHOST_PROPERTIES);
 	    	
-			Properties props = new Properties();
-			File file = new File(LOCALHOST_PROPERTIES);
-			FileInputStream inStream = new FileInputStream (file);
-			props.load(inStream);
-			
 			String prefix = props.getProperty("localhost.prefix");
 			sb.append(prefix);
 			sb.append("/InstagramAutomation/instagramCallback");

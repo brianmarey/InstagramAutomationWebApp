@@ -19,10 +19,17 @@
 		   <version>1.1.6</version>
 		</dependency>
 
-		<dependency>
+       <dependency>
+       	<groupId>com.careydevelopment</groupId>
+       	<artifactId>properties-support</artifactId>
+       	<version>[1.0,)</version>
+    	</dependency>
+       
+ 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
